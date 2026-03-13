@@ -1,0 +1,252 @@
+# =========================================================
+# Cloud DevOps Portfolio - Secure .gitignore
+# Python / Bash / Terraform / AWS / macOS / VS Code
+# =========================================================
+
+# ---------------------------------------------------------
+# macOS system files
+# ---------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# ---------------------------------------------------------
+# Linux / generic temp files
+# ---------------------------------------------------------
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# ---------------------------------------------------------
+# Logs
+# ---------------------------------------------------------
+*.log
+logs/
+*.out
+*.err
+
+# ---------------------------------------------------------
+# Environment files / secrets
+# ---------------------------------------------------------
+.env
+.env.*
+*.env
+*.secret
+*.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+*.csr
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+secrets/
+private/
+credentials/
+*.token
+
+# Allow safe examples
+!.env.example
+!*.example
+!example.env
+
+# ---------------------------------------------------------
+# AWS credentials and local config
+# ---------------------------------------------------------
+.aws/
+aws-creds/
+aws-credentials/
+*.awscreds
+
+# ---------------------------------------------------------
+# Python
+# ---------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+pythonenv/
+.virtualenv/
+
+# Python build / packaging
+build/
+dist/
+site/
+.eggs/
+*.egg
+*.egg-info/
+pip-wheel-metadata/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------
+# Bash / shell artifacts
+# ---------------------------------------------------------
+*.pid
+*.pid.lock
+
+# ---------------------------------------------------------
+# Terraform
+# ---------------------------------------------------------
+# Local working directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# CLI config / overrides / plans
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.rc
+terraform.rc.json
+.terraformrc
+
+# Plan files
+*.tfplan
+*.plan
+plan.out
+
+# Terraform-generated variable files sometimes used locally
+terraform.auto.tfvars
+terraform.auto.tfvars.json
+
+# Keep Terraform lock file committed for reproducibility
+!.terraform.lock.hcl
+
+# Keep Terraform source files committed
+!*.tf
+!*.tf.json
+
+# Allow safe Terraform examples
+!*.tfvars.example
+!terraform.tfvars.example
+!*.auto.tfvars.example
+
+# ---------------------------------------------------------
+# Infrastructure / policy outputs that may contain findings
+# ---------------------------------------------------------
+reports/
+audit-output/
+security-findings/
+scan-results/
+artifacts/
+
+# Allow sanitized examples
+!reports/.gitkeep
+!artifacts/.gitkeep
+
+# ---------------------------------------------------------
+# JSON / YAML / config files that may contain secrets
+# ---------------------------------------------------------
+*secret*.json
+*secret*.yaml
+*secret*.yml
+*secrets*.json
+*secrets*.yaml
+*secrets*.yml
+*credentials*.json
+*credentials*.yaml
+*credentials*.yml
+*private*.json
+*private*.yaml
+*private*.yml
+
+# ---------------------------------------------------------
+# Local-only config
+# ---------------------------------------------------------
+.local/
+local/
+*.local
+config.local.*
+settings.local.*
+.localstack/
+.direnv/
+
+# ---------------------------------------------------------
+# Docker / container local files
+# ---------------------------------------------------------
+.docker/
+docker-data/
+*.tar
+
+# ---------------------------------------------------------
+# VS Code
+# ---------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# ---------------------------------------------------------
+# JetBrains / other editors
+# ---------------------------------------------------------
+.idea/
+*.iml
+
+# ---------------------------------------------------------
+# Testing / temporary sample data
+# ---------------------------------------------------------
+tmp/
+temp/
+scratch/
+sandbox/
+fixtures/private/
+
+# ---------------------------------------------------------
+# Archives
+# ---------------------------------------------------------
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ---------------------------------------------------------
+# OS / miscellaneous
+# ---------------------------------------------------------
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------
+# Git safety for generated keep folders
+# ---------------------------------------------------------
+!.gitkeep
